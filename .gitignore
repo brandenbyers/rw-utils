@@ -2,7 +2,7 @@
 node_modules/
 dump/
 temp/
-roastData/
+data-local/
 bin/basher.sh
 bin/scratch-*
 local/
