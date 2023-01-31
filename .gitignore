@@ -1,0 +1,10 @@
+.env
+node_modules/
+dump/
+temp/
+roastData/
+bin/basher.sh
+bin/scratch-*
+local/
+storageState.json
+.vscode/
