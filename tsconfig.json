@@ -7,6 +7,6 @@
     "strict": true,
     "skipLibCheck": true
   },
-  "include": ["tests/**/*", "utils/**/*"],
+  // "include": ["tests/**/*", "utils/**/*"],
   "exclude": ["node_modules"]
 }

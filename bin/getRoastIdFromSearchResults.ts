@@ -1,7 +1,6 @@
 import { promises as fs } from 'fs'
 import { fetch } from 'undici'
 import { Convert as ConvertRoastSearchResults } from '../types/search'
-import { Convert as ConvertRoastData } from '../types/roast'
 
 // INPUT_RESULT_PATHS="" \
 // npx ts-node bin/getRoastIdFromSearchResults.ts
@@ -36,10 +35,8 @@ const resultPaths = (process.env.INPUT_RESULT_PATHS ?? '').split(',')
       const resultsObject = await acc
       try {
         const roastResponse = await fetch(urlAndId[0] ?? '')
-        const json = (await roastResponse.json()) as {}
+        const json = await roastResponse.json()
         const roastData = JSON.stringify(json)
-        // const convertedJson = ConvertRoastData.toRoastData(json)
-        // const roastData = JSON.stringify(convertedJson)
         await fs.writeFile(
           `temp/roasts-${start}/${urlAndId[1]}.json`,
           roastData,
