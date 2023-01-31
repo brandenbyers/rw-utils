@@ -7,27 +7,27 @@
 // These functions will throw an error if the JSON doesn't
 // match the expected interface, even if the JSON is valid.
 
-export interface RoastData {
-  beanChargeTemperature?: number
-  beanDropTemperature?: number
-  drumChargeTemperature?: number
-  drumDropTemperature?: number
+export type RoastData = {
+  beanChargeTemperature: number
+  beanDropTemperature: number
+  drumChargeTemperature: number
+  drumDropTemperature: number
   beanTemperature?: number[]
   drumTemperature?: number[]
   beanDerivative?: number[]
   ibtsDerivative?: number[]
   exitTemperature?: number[]
   preheatTemperature?: number
-  roastStartIndex?: number
-  roastEndIndex?: number
-  totalRoastTime?: number
-  indexFirstCrackStart?: number
-  indexFirstCrackEnd?: number
+  roastStartIndex: number
+  roastEndIndex: number
+  totalRoastTime: number
+  indexFirstCrackStart: number
+  indexFirstCrackEnd: number
   indexSecondCrackStart?: number
   indexSecondCrackEnd?: number
-  indexYellowingStart?: number
-  weightGreen?: string
-  weightRoasted?: string
+  indexYellowingStart: number
+  weightGreen: string
+  weightRoasted: string
   roastNumber?: number
   sampleRate?: number
   serialNumber?: number
@@ -36,28 +36,28 @@ export interface RoastData {
   firmware?: number
   actions?: Actions
   missingSeconds?: any[]
-  rorPreheat?: number
+  rorPreheat: number
   uid?: string
   userId?: string
-  dateTime?: number
+  dateTime: number
   softwareVersion?: string
   firmwareVersion?: number
-  roastName?: string
-  ambient?: number
-  humidity?: number
+  roastName: string
+  ambient: number
+  humidity: number
   beanId?: string
   updatedAt?: number
-  roastDegree?: number
+  roastDegree: number
   guid?: string
   isPrivate?: number
 }
 
-export interface Actions {
+export type Actions = {
   actionTempList?: any[]
   actionTimeList?: ActionTimeList[]
 }
 
-export interface ActionTimeList {
+export type ActionTimeList = {
   ctrlType?: number
   index?: number
   value?: number

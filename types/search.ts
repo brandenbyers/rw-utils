@@ -7,27 +7,27 @@
 // These functions will throw an error if the JSON doesn't
 // match the expected interface, even if the JSON is valid.
 
-export interface RoastSearchResults {
+export type RoastSearchResults = {
   took?: number
   timed_out?: boolean
   _shards?: Shards
   hits?: Hits
 }
 
-export interface Shards {
+export type Shards = {
   total?: number
   successful?: number
   skipped?: number
   failed?: number
 }
 
-export interface Hits {
+export type Hits = {
   total?: Total
   max_score?: null
   hits?: Hit[]
 }
 
-export interface Hit {
+export type Hit = {
   _index?: Index
   _type?: Type
   _id?: string
@@ -40,7 +40,7 @@ export enum Index {
   Roasts = 'roasts',
 }
 
-export interface Source {
+export type Source = {
   url?: string
   isPrivate?: number
   userId?: string
@@ -68,7 +68,7 @@ export enum Type {
   Doc = '_doc',
 }
 
-export interface Total {
+export type Total = {
   value?: number
   relation?: string
 }
